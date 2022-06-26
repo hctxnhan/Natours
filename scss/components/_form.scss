@@ -1,0 +1,39 @@
+.form {
+  width: 50%;
+  font-size: $font-size--default;
+
+  &__input {
+    font-family: inherit;
+    border-radius: 3px;
+    border: 0px;
+    width: 85%;
+    padding: 1.5rem 1.5rem;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 4rem rgba($color--black, 0.2);
+      border-bottom: 3px solid $color--medium-green;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px solid $color--secondary-dark;
+    }
+  }
+
+  &__radio-group {
+    display: inline-flex;
+    gap: 1rem;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
+  &__radio {
+    height: 3rem;
+    width: 3rem;
+  }
+}
